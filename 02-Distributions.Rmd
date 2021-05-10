@@ -1,0 +1,38 @@
+# Distributions
+
+## What are probability distributions
+
+## What do we need distributions for
+When working with probability distributions, the first differentiation you have to make is between _continuous_ and _discrete_ distributions
+
+## Distributions in R:
+Explain the syntax of distros in R (e.g. dnorm, rnorm, pnorm, qnorm)
+
+## Continuous probabality distributions
+In this section i will present to you the most prominent and widely applicable continuous distributions.
+
+### Uniform distribution
+
+### Normal distribution
+Tell something about the central limit theorem and the extraordinary position of the normal distribution.
+
+## Discrete distributions
+
+### Bernouille distribution
+
+### Binomial distribution
+
+\begin{equation}
+  P(X=k~|~n,~p) = \binom{n}{k}p^k(1-p)^{n-k}
+  (\#eq:binom)
+\end{equation}
+
+And here in Equation \@ref(eq:binom), we see the equation for the binomial distribution.
+
+```{theorem, pyth, name="Pythagorean theorem"}
+For a right triangle, if $c$ denotes the length of the hypotenuse
+and $a$ and $b$ denote the lengths of the other two sides, we have
+
+$$a^2 + b^2 = c^2$$
+```
+
