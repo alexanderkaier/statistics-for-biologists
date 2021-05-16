@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>No Jack of all trades | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science</title>
+  <meta name="description" content="No Jack of all trades | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="No Jack of all trades | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="No Jack of all trades | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science" />
+  
+  
+  
+
+<meta name="author" content="Alexander Kaier" />
+
+
+<meta name="date" content="2021-05-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="what-not-to-expect-from-this-course.html"/>
+<link rel="next" href="an-ode-to-r.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics for Biologists</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="what-to-expect-from-this-course.html"><a href="what-to-expect-from-this-course.html"><i class="fa fa-check"></i>What to expect from this course</a></li>
+<li class="chapter" data-level="" data-path="what-not-to-expect-from-this-course.html"><a href="what-not-to-expect-from-this-course.html"><i class="fa fa-check"></i>What not to expect from this course</a></li>
+<li class="chapter" data-level="" data-path="no-jack-of-all-trades.html"><a href="no-jack-of-all-trades.html"><i class="fa fa-check"></i>No Jack of all trades</a></li>
+<li class="chapter" data-level="" data-path="an-ode-to-r.html"><a href="an-ode-to-r.html"><i class="fa fa-check"></i>An ode to R</a></li>
+<li class="chapter" data-level="" data-path="roadmap.html"><a href="roadmap.html"><i class="fa fa-check"></i>Roadmap</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="descriptive-data-analysis.html"><a href="descriptive-data-analysis.html"><i class="fa fa-check"></i><b>1</b> Descriptive data analysis</a></li>
+<li class="chapter" data-level="2" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>2</b> Distributions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="what-are-probability-distributions.html"><a href="what-are-probability-distributions.html"><i class="fa fa-check"></i><b>2.1</b> What are probability distributions</a></li>
+<li class="chapter" data-level="2.2" data-path="what-do-we-need-distributions-for.html"><a href="what-do-we-need-distributions-for.html"><i class="fa fa-check"></i><b>2.2</b> What do we need distributions for</a></li>
+<li class="chapter" data-level="2.3" data-path="distributions-in-r.html"><a href="distributions-in-r.html"><i class="fa fa-check"></i><b>2.3</b> Distributions in R:</a></li>
+<li class="chapter" data-level="2.4" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html"><i class="fa fa-check"></i><b>2.4</b> Continuous probabality distributions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Uniform distribution</a></li>
+<li class="chapter" data-level="2.4.2" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#normal-distribution"><i class="fa fa-check"></i><b>2.4.2</b> Normal distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="discrete-distributions.html"><a href="discrete-distributions.html"><i class="fa fa-check"></i><b>2.5</b> Discrete distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="discrete-distributions.html"><a href="discrete-distributions.html#bernouille-distribution"><i class="fa fa-check"></i><b>2.5.1</b> Bernouille distribution</a></li>
+<li class="chapter" data-level="2.5.2" data-path="discrete-distributions.html"><a href="discrete-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>2.5.2</b> Binomial distribution</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
+<li class="chapter" data-level="4" data-path="reject-or-not-to-reject.html"><a href="reject-or-not-to-reject.html"><i class="fa fa-check"></i><b>4</b> Reject or not to reject</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="t-test.html"><a href="t-test.html"><i class="fa fa-check"></i><b>4.1</b> t-test</a></li>
+<li class="chapter" data-level="4.2" data-path="f-test.html"><a href="f-test.html"><i class="fa fa-check"></i><b>4.2</b> F-test</a></li>
+<li class="chapter" data-level="4.3" data-path="chi2-test.html"><a href="chi2-test.html"><i class="fa fa-check"></i><b>4.3</b> <span class="math inline">\(\chi^2\)</span>-test</a></li>
+<li class="chapter" data-level="4.4" data-path="one-test-to-rule-them-all-the-likelihood-ratio-test.html"><a href="one-test-to-rule-them-all-the-likelihood-ratio-test.html"><i class="fa fa-check"></i><b>4.4</b> One test to rule them all: The likelihood ratio test</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
+<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="the-math-behind-the-model.html"><a href="the-math-behind-the-model.html"><i class="fa fa-check"></i><b>A</b> The math behind the model</a></li>
+<li class="chapter" data-level="B" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>B</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="no-jack-of-all-trades" class="section level2 unnumbered">
+<h2>No Jack of all trades</h2>
+<p>Although this tutorial aims to be quite comprehensive, I am totally aware of the fact that no single person can learn and know everything, according to the old saying “<em>Jack of all trades, master of none</em>”. After my undergraduate studies in biology I chose to pursue my graduate studies in the fields of theoretical biology and bioinformatics, with specialization on the analysis of genomic data. By doing so, I was not able to stay up to date with all the biological methods that are used in the wet lab. So in order to perform sound science, I have to rely on the expertise of wet lab scientists to actually design and conduct the experiments. I have the greatest respect towards all biologists and other wet lab scientists who struggle with the obstacles of their research, like maintaining their samples, dealing with suboptimal environmental conditions, tedious purification steps, time management for complex experiments and all the other things I do not know much about. However, as a bioinformatician it is my duty to know biology at least to some extent. Domain knowledge for any data analyst is paramount to select the right models to analyze the data at hand or answer a specific scientific question. As we will see later there is sometimes no single best way to analyze your data and the precise analysis can depend on the context given. But this kind of expertise is no one-way road. Hence, it is not a choice, but a necessity for any scientist in the life sciences, to know at least the foundations of statistics (and yes dear reader, these foundations comprise more than a simple t-test command). And while this tutorial aims at giving you exactly this foundations at hand, it can by no means cover all fields of modern statistics and analysis of biological data. Also, this is not expected from any experimental scientist. It is very likely that at some point in your career you will encounter or generate data that will surpass your skills in data analysis. This is completely normal and whole professions like the biostatistician and the bioinformatician have emerged in order to analyze these data (these professions are of great demand nowadays due to the vast amount of data being generated by high-throughput sequencing in recent years). But it is still your job to perform rudimentary data analysis with small to moderate sized data sets independently. Also you should be in the position to find a common language with the biostatistician/bioinformatician at your department, when discussing experimental design and data analysis. This fruitful conversations and consequently successful projects can only emerge if you know statistics to some extent, like the analyst knows the biology and important principles of wet-lab methods to some degree.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-not-to-expect-from-this-course.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="an-ode-to-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/alexanderkaier/statistics-for-biologists/edit/main/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/alexanderkaier/statistics-for-biologists/blob/main/index.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>An ode to R | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science</title>
+  <meta name="description" content="An ode to R | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="An ode to R | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="An ode to R | Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science" />
+  
+  
+  
+
+<meta name="author" content="Alexander Kaier" />
+
+
+<meta name="date" content="2021-05-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="no-jack-of-all-trades.html"/>
+<link rel="next" href="roadmap.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics for Biologists</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="what-to-expect-from-this-course.html"><a href="what-to-expect-from-this-course.html"><i class="fa fa-check"></i>What to expect from this course</a></li>
+<li class="chapter" data-level="" data-path="what-not-to-expect-from-this-course.html"><a href="what-not-to-expect-from-this-course.html"><i class="fa fa-check"></i>What not to expect from this course</a></li>
+<li class="chapter" data-level="" data-path="no-jack-of-all-trades.html"><a href="no-jack-of-all-trades.html"><i class="fa fa-check"></i>No Jack of all trades</a></li>
+<li class="chapter" data-level="" data-path="an-ode-to-r.html"><a href="an-ode-to-r.html"><i class="fa fa-check"></i>An ode to R</a></li>
+<li class="chapter" data-level="" data-path="roadmap.html"><a href="roadmap.html"><i class="fa fa-check"></i>Roadmap</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="descriptive-data-analysis.html"><a href="descriptive-data-analysis.html"><i class="fa fa-check"></i><b>1</b> Descriptive data analysis</a></li>
+<li class="chapter" data-level="2" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>2</b> Distributions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="what-are-probability-distributions.html"><a href="what-are-probability-distributions.html"><i class="fa fa-check"></i><b>2.1</b> What are probability distributions</a></li>
+<li class="chapter" data-level="2.2" data-path="what-do-we-need-distributions-for.html"><a href="what-do-we-need-distributions-for.html"><i class="fa fa-check"></i><b>2.2</b> What do we need distributions for</a></li>
+<li class="chapter" data-level="2.3" data-path="distributions-in-r.html"><a href="distributions-in-r.html"><i class="fa fa-check"></i><b>2.3</b> Distributions in R:</a></li>
+<li class="chapter" data-level="2.4" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html"><i class="fa fa-check"></i><b>2.4</b> Continuous probabality distributions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Uniform distribution</a></li>
+<li class="chapter" data-level="2.4.2" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#normal-distribution"><i class="fa fa-check"></i><b>2.4.2</b> Normal distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="discrete-distributions.html"><a href="discrete-distributions.html"><i class="fa fa-check"></i><b>2.5</b> Discrete distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="discrete-distributions.html"><a href="discrete-distributions.html#bernouille-distribution"><i class="fa fa-check"></i><b>2.5.1</b> Bernouille distribution</a></li>
+<li class="chapter" data-level="2.5.2" data-path="discrete-distributions.html"><a href="discrete-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>2.5.2</b> Binomial distribution</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
+<li class="chapter" data-level="4" data-path="reject-or-not-to-reject.html"><a href="reject-or-not-to-reject.html"><i class="fa fa-check"></i><b>4</b> Reject or not to reject</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="t-test.html"><a href="t-test.html"><i class="fa fa-check"></i><b>4.1</b> t-test</a></li>
+<li class="chapter" data-level="4.2" data-path="f-test.html"><a href="f-test.html"><i class="fa fa-check"></i><b>4.2</b> F-test</a></li>
+<li class="chapter" data-level="4.3" data-path="chi2-test.html"><a href="chi2-test.html"><i class="fa fa-check"></i><b>4.3</b> <span class="math inline">\(\chi^2\)</span>-test</a></li>
+<li class="chapter" data-level="4.4" data-path="one-test-to-rule-them-all-the-likelihood-ratio-test.html"><a href="one-test-to-rule-them-all-the-likelihood-ratio-test.html"><i class="fa fa-check"></i><b>4.4</b> One test to rule them all: The likelihood ratio test</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
+<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="the-math-behind-the-model.html"><a href="the-math-behind-the-model.html"><i class="fa fa-check"></i><b>A</b> The math behind the model</a></li>
+<li class="chapter" data-level="B" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>B</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics for Biologists: An Introduction to the application, understanding, and philosophy of statistical analysis in life science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="an-ode-to-r" class="section level2 unnumbered">
+<h2>An ode to R</h2>
+<p>I first encountered the statistical programming language R when I had to accomplish the data analysis for the data I collected for my Bachelor thesis. Back then I had no idea about programming, R, or applied statistics (besides maybe the t-test, how much of your undergraduate statistics course do you remember and apply in your daily work?). Back then my supervisor forced me to do the data analysis using R and RStudio<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Although a medical biologist by training, he loved programming, statistics and data analysis. I shall thank him forever for opening that door for me (he actually rather pushed me through it for my own good). As soon as I started doing my data analysis using R and RStudio, I realized the treasure I had discovered. During the remainder of this section, I will share with you the perks of R and RStudio that I learned appreciating over time.</p>
+<p>The first and probably biggest advantage of R or any other programming language over spreadsheet software like Excel is that the analysis using R is self-documenting. What I mean by that is when you do your data analysis in R, you usually create an empty script first, which you then fill with the code that you need to load your data, analyze it at will and create and save output statistics and plots. This fundamentally different approach compared to spreadsheet software allows you to come back to your analysis at any time and break it down bit-by-bit. Imagine you get some experimental data and need to extract some summary statistics from them. After some time, you realize you made a mistake and have to redo the analysis. If you did it using some spreadsheet software, then good luck redoing all the clicks and drags and whatever steps you did in a reproducible way. If you used R instead, you just open the script you wrote for the analysis in RStudio, go through it line by line, change the erroneous part, and rerun the whole script. You virtually eliminate the potential for human errors, when doing the same thing twice. This also saves a huge amount of time, depending on the complexity of the analysis and the amount of data. If then anybody asks you what you precisely did, you can just hand them over the script or explain it to them like you would read a book. If you used some spreadsheet software instead, chances are high you wrote every single step down in your manual lab-book. If you are sufficiently meticulous in your documentation to have written it down so that you can actually redo a complex analysis, I bet writing down the whole analysis took you more time than you’d like to admit. This doubling of work almost never happens when using R. Also you are less prone to work with the raw data when using R. I have seen on multiple occacions now that some scientist hands me over a spreadsheet, where not only the raw data was included, but they also created already summary statistics and plots and whatever in the same spreadsheet. <strong>Never do that</strong>. Although I think of it as self-evident, I have seen this habit too often to not emphasize it here. When doing your data analysis, you load your data into R and then manipulate the version of the data in your running session<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. Once you are done with the analysis, you save <em>a new document</em> with whatever insight you gained from your data. Never manipulate your raw data. This is only one of the many good habits you’ll take to you heart once you start working with data more professional and with R.</p>
+<p>Second, some analyses can be <em>really</em> specific to the problem at hand. Chances are you search the internet for days in order to solve a specific problem or implement the solution as desired using some spreadsheet software. As the term <em>programming language</em> implies, R can be programmed, meaning that quite often it proves to be handy if you can create the desired solutions using a few lines of code which you then implement in your analysis. Many times when you want to use a specific program to analyze your data, this program expects a very specific way of organization within you dataset. If you can’t find someone who did the exact same data transformation before and published a program that you can use you might run into trouble. If you are able to transform your data yourself using some basic programming, there are no strings attached to you<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. However, this is no book about programming, and therefore we will not dive deep into the core concepts of programming languages, but focus on the code that is necessary to conduct sound data analysis and statistics. But keep in mind the power you gain if you can solve a huge amount of problems that would otherwise prevent you from doing what you want to do using only a few lines of code.</p>
+<p>Third, and related to the first point, sometimes you want to test different models and compare their fit to your data or create different summary statistics, based on the question to be answered. Using spreadsheet software (by now you probably guessed it already) it can take a lot of time to copy data, transform it, handle missing data appropriately and so on. Using R, these kind of tasks are usually accomplished by changing a few lines of code slightly, maybe by tweaking some function parameters or looping over different models to compare them. And again, the single steps are much more tractable if you do this using a programming based approach compared to spreadsheet software.</p>
+<!--
+Third, 
+
+R has three great advantages over Excel and likewise:
+
+- datasets that are too large for excel can still be analyzed.
+- Open source for the win.
+-->
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>RStudio is what is called an <em>Integrated Development Environment</em>(IDE). This kind of software is there for helping you writing, testing, and managing code, and since R is a statistical programming language, R-Studio is particularly designed for data analysis tasks. If you have it not already, I strongly recommend downloading the version suitable for your OS under the <a href="https://www.rstudio.com/products/rstudio/download/">RStudio download page</a><a href="an-ode-to-r.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>or if you work with spreadsheet software, create a copy and do the analysis using this copy<a href="an-ode-to-r.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Because of this precise feature of being programmable, in recent years hundreds of R packages were written specifically with the aim of doing biological data analysis. Most of these packages are collected and distributed using the package manager <a href="https://www.bioconductor.org/">Bioconductor</a>. Although you probably won’t need or use most of the packages provided there it can give you quite a nice impression of how versatile and powerful the programming paradigm is compared to other approaches for data analysis<a href="an-ode-to-r.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="no-jack-of-all-trades.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="roadmap.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/alexanderkaier/statistics-for-biologists/edit/main/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/alexanderkaier/statistics-for-biologists/blob/main/index.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
