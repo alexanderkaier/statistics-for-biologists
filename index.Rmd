@@ -8,7 +8,7 @@ site: "bookdown::bookdown_site"
 # Preface {-}
 
 <!--
-## Why is statistics in life science important? {-}
+## What is statistics and why do we need it? {-}
 Fortunately for me (and at this point maybe unfortunately for some readers), there is virtually no single domain in the life sciences that has not been invaded by statistical analysis. And the reason for that is easy:
 __Statistics is the best and sometimes only way we have to gain insight from data.__
 
@@ -51,11 +51,6 @@ Each chapter will be accompanied by some exercises. These are categorized into _
 <!--
 One final treat I will present to you in this course is owed to me being obsessed with interactive data charts. Publishing online has the special benefit that I can include graphical representations of important statistical concepts which are furnished with control elements. You can tweak the parameters within the charts and experience in real time, how the concept at hand changes its behavior qualitatively and quantitatively. I think this is an exciting and fruitful way of conveying science and a method of transporting ideas and visions from someone's mind to the eye of the reader. Please be aware that you need a stable internet connection in order to interact with these kind of charts.
 -->
-
-```{r}
-DT::datatable(iris)
-```
-
 
 To sum it up, after finishing this course, you will feel confident around different types of data, and recognize potential pitfalls in the design of experimental studies. You will not start sweating in the face of the myriads of options to analyze your data and be able to distinct different types of statistical tests and models. In short, __you will have learned how to think statistically__.
 

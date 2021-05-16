@@ -1,8 +1,16 @@
 bookdown::gitbook:
   css: style.css
+  split_by: section
   config:
     toc:
+      collapse: subsection
       before: |
         <li><a href="./">Statistics for Biologists</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    toolbar:
+      position: fixed
+    fontsettings:
+      theme: white
+      family: sans
+      size: 3
