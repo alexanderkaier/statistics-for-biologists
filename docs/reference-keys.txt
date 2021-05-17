@@ -2,7 +2,7 @@ eq:binom
 descriptive-data-analysis
 distributions
 what-are-probability-distributions
-what-do-we-need-distributions-for
+why-do-we-need-probability-distributions
 distributions-in-r
 continuous-probabality-distributions
 uniform-distribution
@@ -12,6 +12,10 @@ bernouille-distribution
 binomial-distribution
 regression-and-glm
 correlation-and-covariance
-results
+reject-or-not-to-reject
+t-test
+f-test
+chi-squared-test
+one-test-to-rule-them-all-the-likelihood-ratio-test
 the-math-behind-the-model
 references
