@@ -3,7 +3,6 @@ bookdown::gitbook:
   split_by: section
   config:
     toc:
-      collapse: subsection
       before: |
         <li><a href="./">Statistics for Biologists</a></li>
       after: |

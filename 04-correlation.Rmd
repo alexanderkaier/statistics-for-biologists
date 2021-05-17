@@ -1,14 +1,2 @@
-# Reject or not to reject
+# Correlation and covariance
 
-One of the most important and frequently encountered problems for scientists is the assessment of the difference between experimental outcomes. This difference can be manifold, say you have two sets of plants, one set grown under heat, the other under control conditions. Now you measure some trait and want to find out whether there exist a difference between the measurements under these two distinct conditions. Or you apply multiple chemicals to your cell cultures and measure the rate of endocytosis under the influence of these various chemicals. Finally, you want to know, if the endocytic behaviour of any cell culture is different from 
-
-## t-test
-
-
-## F-test
-
-
-## \(\chi^2\)-test
-
-
-## One test to rule them all: The likelihood ratio test

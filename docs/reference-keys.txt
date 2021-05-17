@@ -10,14 +10,8 @@ normal-distribution
 discrete-distributions
 bernouille-distribution
 binomial-distribution
-data-transformation
-reject-or-not-to-reject
-t-test
-f-test
-chi2-test
-one-test-to-rule-them-all-the-likelihood-ratio-test
+regression-and-glm
+correlation-and-covariance
 results
-interactive-component
-conclusion
 the-math-behind-the-model
 references
