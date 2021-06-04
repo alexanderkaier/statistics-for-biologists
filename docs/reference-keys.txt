@@ -1,10 +1,11 @@
 eq:binom
 descriptive-data-analysis
-distributions
+probability-distributions
 why-do-we-need-probability-distributions
+central-limit-theorem
 distributions-in-r
 discrete-distributions
-bernouille-distribution
+bernouille-trial
 binomial-distribution
 continuous-probabality-distributions
 uniform-distribution
