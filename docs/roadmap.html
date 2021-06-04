@@ -24,7 +24,7 @@
 <meta name="author" content="Alexander Kaier" />
 
 
-<meta name="date" content="2021-05-17" />
+<meta name="date" content="2021-05-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -148,18 +148,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="descriptive-data-analysis.html"><a href="descriptive-data-analysis.html"><i class="fa fa-check"></i><b>1</b> Descriptive data analysis</a></li>
 <li class="chapter" data-level="2" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>2</b> Distributions</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-are-probability-distributions.html"><a href="what-are-probability-distributions.html"><i class="fa fa-check"></i><b>2.1</b> What are probability distributions</a></li>
-<li class="chapter" data-level="2.2" data-path="why-do-we-need-probability-distributions.html"><a href="why-do-we-need-probability-distributions.html"><i class="fa fa-check"></i><b>2.2</b> Why do we need probability distributions</a></li>
-<li class="chapter" data-level="2.3" data-path="distributions-in-r.html"><a href="distributions-in-r.html"><i class="fa fa-check"></i><b>2.3</b> Distributions in R:</a></li>
+<li class="chapter" data-level="2.1" data-path="why-do-we-need-probability-distributions.html"><a href="why-do-we-need-probability-distributions.html"><i class="fa fa-check"></i><b>2.1</b> Why do we need probability distributions</a></li>
+<li class="chapter" data-level="2.2" data-path="distributions-in-r.html"><a href="distributions-in-r.html"><i class="fa fa-check"></i><b>2.2</b> Distributions in R:</a></li>
+<li class="chapter" data-level="2.3" data-path="discrete-distributions.html"><a href="discrete-distributions.html"><i class="fa fa-check"></i><b>2.3</b> Discrete distributions</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="discrete-distributions.html"><a href="discrete-distributions.html#bernouille-distribution"><i class="fa fa-check"></i><b>2.3.1</b> Bernouille distribution</a></li>
+<li class="chapter" data-level="2.3.2" data-path="discrete-distributions.html"><a href="discrete-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>2.3.2</b> Binomial distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="2.4" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html"><i class="fa fa-check"></i><b>2.4</b> Continuous probabality distributions</a>
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Uniform distribution</a></li>
 <li class="chapter" data-level="2.4.2" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#normal-distribution"><i class="fa fa-check"></i><b>2.4.2</b> Normal distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="discrete-distributions.html"><a href="discrete-distributions.html"><i class="fa fa-check"></i><b>2.5</b> Discrete distributions</a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="discrete-distributions.html"><a href="discrete-distributions.html#bernouille-distribution"><i class="fa fa-check"></i><b>2.5.1</b> Bernouille distribution</a></li>
-<li class="chapter" data-level="2.5.2" data-path="discrete-distributions.html"><a href="discrete-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>2.5.2</b> Binomial distribution</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="regression-and-glm.html"><a href="regression-and-glm.html"><i class="fa fa-check"></i><b>3</b> Regression and GLM</a></li>
@@ -200,7 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Chapter 2</strong> will lead us to the concept of distributions. Although the term “distribution” is used frequently in everyday life, its meaning in stats lingo is not so well-known. We will explore the differences between data distributions and theoretical distribution. Also, you will learn why and how to apply the important concepts of <em>distribution parameters</em> and <em>parameter estimation</em>. Some important types of distributions will be presented and their characteristics illuminated. Also, we will see how to fit a distribution to the data at hand. The concepts learned here will form the foundations for the subsequent chapters and will prove invaluable for your further understanding of statistics.</p>
 <p>In <strong>Chapter 3</strong>, we will dip our toes in the deep sea of regressions and explore the concept of <em>generalized linear models</em> (GLM). Don’t worry if this means nothing to you right now, it will all come at an appropriate time. This chapter is the logical consequence of the principles of distributions that we have learned before. The difference is that for GLM, the distribution parameter is no longer constant but depends on some variable within our data. In this way, we can explore the relations between two different data variables, the independent variable and the dependent variable. Although many people learning statistics do not connect these two concepts, this chapter paves the way for understanding statistical testing, as will be shown later.</p>
 <p><strong>Chapter 4</strong> will deal with the concepts of correlation and covariance. These topics are in some way the next step after linear regression, because for the analysis of correlation and covariance, you need to lose the constraint of one variable depending on another, as is the case for linear regression. In correlation analysis, no dependency is assumed, and therefore only the tendency of different data variables to vary together is analyzed.</p>
-<p><strong>Chapter 5</strong> will bring us finally to the concepts of statistical testing. Although some readers render this topic to be the most important one for their work and would therefore like to jump into it right away, there is a reason for putting it at the end of the course. Statistical testing unites all the knowledge and skills we have gained along the way. We will introduce the most important statistical tests and associate their theoretical background and results with the content of the preceding chapters. So I kindly ask you to not be hasty and enjoy the ride we take all the way down until this chapter in order to understand and appreciate it as much as possible.</p>
+<p><strong>Chapter 5</strong> will bring us finally to the concepts of statistical testing. Although some readers render this topic to be the most important one for their work and would therefore like to jump into it right away, there is a reason for putting it at the end of the course. Statistical testing unites all the knowledge and skills we have gained along the way. We will introduce the most important statistical tests and associate their theoretical background and results with the content of the preceding chapters. So I kindly ask you to not be hasty and enjoy the ride we take all the way until this chapter in order to understand and appreciate it as much as possible.</p>
 <p>Finally, there is the <strong>Appendix</strong>. Here, one part will be about <a href="the-math-behind-the-model.html#the-math-behind-the-model">the more advanced mathematics of the introduced topics</a>. Whenever I deem the mathematical details of a topic to be useful for a deeper understanding but out of scope and not necessary for this course, I will refer to this part. Here, the mathematics will be explained thoroughly and calculations will be done step-by-step, so that readers with non-mathematical background can follow along. The curious reader can then come here and try to retrace the mathematics that can lead to a deeper insight of the topic. However, this part is not necessary for understanding the content of this course and can be ignored at will.</p>
 
 </div>

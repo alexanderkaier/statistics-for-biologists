@@ -24,7 +24,7 @@
 <meta name="author" content="Alexander Kaier" />
 
 
-<meta name="date" content="2021-05-17" />
+<meta name="date" content="2021-05-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="descriptive-data-analysis.html"/>
-<link rel="next" href="what-are-probability-distributions.html"/>
+<link rel="next" href="why-do-we-need-probability-distributions.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -148,18 +148,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="descriptive-data-analysis.html"><a href="descriptive-data-analysis.html"><i class="fa fa-check"></i><b>1</b> Descriptive data analysis</a></li>
 <li class="chapter" data-level="2" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>2</b> Distributions</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-are-probability-distributions.html"><a href="what-are-probability-distributions.html"><i class="fa fa-check"></i><b>2.1</b> What are probability distributions</a></li>
-<li class="chapter" data-level="2.2" data-path="why-do-we-need-probability-distributions.html"><a href="why-do-we-need-probability-distributions.html"><i class="fa fa-check"></i><b>2.2</b> Why do we need probability distributions</a></li>
-<li class="chapter" data-level="2.3" data-path="distributions-in-r.html"><a href="distributions-in-r.html"><i class="fa fa-check"></i><b>2.3</b> Distributions in R:</a></li>
+<li class="chapter" data-level="2.1" data-path="why-do-we-need-probability-distributions.html"><a href="why-do-we-need-probability-distributions.html"><i class="fa fa-check"></i><b>2.1</b> Why do we need probability distributions</a></li>
+<li class="chapter" data-level="2.2" data-path="distributions-in-r.html"><a href="distributions-in-r.html"><i class="fa fa-check"></i><b>2.2</b> Distributions in R:</a></li>
+<li class="chapter" data-level="2.3" data-path="discrete-distributions.html"><a href="discrete-distributions.html"><i class="fa fa-check"></i><b>2.3</b> Discrete distributions</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="discrete-distributions.html"><a href="discrete-distributions.html#bernouille-distribution"><i class="fa fa-check"></i><b>2.3.1</b> Bernouille distribution</a></li>
+<li class="chapter" data-level="2.3.2" data-path="discrete-distributions.html"><a href="discrete-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>2.3.2</b> Binomial distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="2.4" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html"><i class="fa fa-check"></i><b>2.4</b> Continuous probabality distributions</a>
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#uniform-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Uniform distribution</a></li>
 <li class="chapter" data-level="2.4.2" data-path="continuous-probabality-distributions.html"><a href="continuous-probabality-distributions.html#normal-distribution"><i class="fa fa-check"></i><b>2.4.2</b> Normal distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="discrete-distributions.html"><a href="discrete-distributions.html"><i class="fa fa-check"></i><b>2.5</b> Discrete distributions</a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="discrete-distributions.html"><a href="discrete-distributions.html#bernouille-distribution"><i class="fa fa-check"></i><b>2.5.1</b> Bernouille distribution</a></li>
-<li class="chapter" data-level="2.5.2" data-path="discrete-distributions.html"><a href="discrete-distributions.html#binomial-distribution"><i class="fa fa-check"></i><b>2.5.2</b> Binomial distribution</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="regression-and-glm.html"><a href="regression-and-glm.html"><i class="fa fa-check"></i><b>3</b> Regression and GLM</a></li>
@@ -196,6 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="distributions" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Distributions</h1>
+<p>In the previous chapter we took a look at the data as well as their characteristics and summary statistics. While this approach is quite useful for initial exploration, we usually aim to create some inference based on our data. That is, we collect some sample data and then wish to make a statement about the population as a whole based on these data. This chapter provides an overview of the concept of <em>distributions</em>, which are the statistician’s primary vehicle to accomplish this task. We discuss different classes of distributions and introduce the most important ones for biological (and most other) disciplines. All of this will be accompanied by examples to give you some feeling about how to think about your data in terms of distributions. We will also discuss the very important topic of <em>likelihood</em>, which tells us how well a distribution fits our data. The concepts in this chapter are paramount for your understanding of subsequent concepts.</p>
 </div>
             </section>
 
@@ -203,7 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="descriptive-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="what-are-probability-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="why-do-we-need-probability-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

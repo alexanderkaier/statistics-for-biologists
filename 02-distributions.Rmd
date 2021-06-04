@@ -1,34 +1,35 @@
-# Distributions
+# Probability Distributions
 
-## What are probability distributions
+In the previous chapter we took a look at the data as well as their characteristics and summary statistics. While this approach is quite useful for initial exploration, we usually aim to create some inference based on our data. That is, we collect some sample data and then wish to make a statement about the population as a whole based on these data. This chapter provides an overview of the concept of _distributions_, which are the statistician's primary vehicle to accomplish this task. We discuss different classes of distributions and introduce the most important ones for biological -- and many other -- disciplines. All of this will be accompanied by examples to give you some feeling about how to think about your data in terms of distributions. We will also discuss the very important topic of _likelihood_, which tells us how well a distribution fits our data. The concepts in this chapter are paramount for your understanding of subsequent concepts.
+
 
 ## Why do we need probability distributions
-<!--
-When working with probability distributions, the first differentiation you have to make is between _continuous_ and _discrete_ distributions
--->
+
+The question of any _why_ is never easily answered. I will try to explain the necessary study of distributions for statistics by citing Kass 2011. In his publication "Statistical Inference: The Big Picture", he referred to data as belonging to the _"real world"_, while scientific and statistical models -- including probability distributions -- are part of the _"theoretical world"_.
+
+While data emerges from observation and reflects partially the state of the _real world_, we cannot make much reliable inference based on data alone that includes variation in the data. This is because data obtained from an experiment with limited sample size are by definition just that. The straight-forward way to issue any reliable statement about the investigated population would be to observe it as a whole. But of course, in most cases this is simply impossible either due to the vast amount of individuals belonging to that population or because of the complex laboratory conditions that are established for testing a certain hypothesis. So, we have to find another way to infer population-wide characteristics from the experimental data.
+
+On the other hand, probability distributions, as part of the _theoretical world_, are mathematically well-defined and allow many kinds of investigation, like tweaking of parameter to change the shape of the distribution or prediction of the distributions behavior under certain circumstances. However, a distribution is by its nature just a mathematical function, nothing more, nothing less.
+
+If we think about it for a moment, we see that data and distributions are in some way two sides of the same coin. While the former describe the world, they do not allow broader inference beyond the collected data. The latter allow all that, but is not connected to the physical world per se. Now we do the following: By creating a hypothetical link between the data and the probability distribution, we get the best of both worlds. We have data which gives insight about the problem we are investigating, and a distribution that fits the collected data. By assuming that the data indeed come from a population that can be described with the utilized distribution (i.e. the sample data is representative for the population), we can make predictions about the population's state and behavior by analyzing the distribution we used. 
+
+The remainder of this chapter goes over different kinds of distributions you are likely to encounter on a regular basis once you start conducting your own experiments. Also, we will see how you can actually "fit" a distribution to a your data and what metrics exist to check your _goodness of fit_. However, before we do all that, we need to talk 
+
+## Central limit theorem
 
 ## Distributions in R:
 <!--
 Explain the syntax of distros in R (e.g. dnorm, rnorm, pnorm, qnorm)
 -->
 
-## Continuous probabality distributions
-<!--
-In this section i will present to you the most prominent and widely applicable continuous distributions.
--->
-
-### Uniform distribution
-
-### Normal distribution
-<!--
-Tell something about the central limit theorem and the extraordinary position of the normal distribution.
--->
-
 ## Discrete distributions
+Many things in this world can be counted. For example the number of times some insects visit a flower, the number of plant species inhabiting an ecosystem, or how often the concentration of protein in a repeated experiment exceeds a pre-set threshold. 
 
-### Bernouille distribution
+### Bernouille trial
+
 
 ### Binomial distribution
+The next distribution we take a look at is the binomial distribution. This is a very important distribution that finds application in all sort of things, as we will see in just a bit. The 
 
 \begin{equation}
   P(X=k~|~n,~p) = \binom{n}{k}p^k(1-p)^{n-k}
@@ -37,3 +38,41 @@ Tell something about the central limit theorem and the extraordinary position of
 
 And here in Equation \@ref(eq:binom), we see the function for the binomial distribution.
 
+<!--
+```{r, echo=FALSE}
+testSample <- dbinom(x=0:10, size=10, prob=0.5)
+par(mar=c(4, 5, 4, 2))
+barplot(testSample, names.arg = 0:10, ylim = c(0, 0.3), yaxt = "n",
+        xlab = "Number of uses of right paw",
+        ylab = "Probability under \n null hypothesis")
+
+## Draw the y-axis.
+axis(side = 2,
+     ## Rotate the labels.
+     las = 2)
+```
+-->
+
+```{r, echo=FALSE}
+par(mgp=c(3.5,1,0)) # default is c(3,1,0)
+par(mar=c(5,5,4,2)+0.1) # default is c(5,4,4,2) + 0.1
+xAxis <- 0:10
+plot(xAxis, dbinom(xAxis, size=10, prob=0.5), type = "h", lwd = 2.5, las = 1,
+     xlab = "Number of uses of right paw",
+     ylab = "Probability density",
+     cex.lab = 1.3)
+lines(xAxis, dbinom(xAxis, size=10, prob=0.5), lty=2, col="grey")
+```
+
+
+## Continuous probabality distributions
+<!--
+So far we have investigated a set of important discrete distributions that you are likely to encounter in real life as well as in the lab. However, many things do no attain neat, discrete values. One prominent example used over and over again in classrooms is a person's height. You surely agree when I say that the distribution of heights within a population can not be represented using discrete values. Rather, the height of each person can be seen as randomly drawn from a continuous spectrum of possible heights. Therefore, we turn now towards _continuous distributions_. 
+-->
+
+### Uniform distribution
+
+### Normal distribution
+<!--
+Tell something about the central limit theorem and the extraordinary position of the normal distribution.
+-->
