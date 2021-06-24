@@ -18,4 +18,5 @@ f-test
 chi-squared-test
 one-test-to-rule-them-all-the-likelihood-ratio-test
 the-math-behind-the-model
+central-limit-theorem-1
 references

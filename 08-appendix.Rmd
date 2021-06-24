@@ -2,4 +2,7 @@
 
 # The math behind the model
 
+## Central limit theorem
+sadf
+
 # References
