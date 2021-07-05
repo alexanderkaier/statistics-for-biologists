@@ -1,3 +1,4 @@
+fig:unnamed-chunk-5
 eq:binom
 descriptive-data-analysis
 probability-distributions
@@ -7,9 +8,12 @@ distributions-in-r
 discrete-distributions
 bernouille-trial
 binomial-distribution
+poisson-distribution
 continuous-probabality-distributions
 uniform-distribution
 normal-distribution
+exercises
+easy
 regression-and-glm
 correlation-and-covariance
 reject-or-not-to-reject

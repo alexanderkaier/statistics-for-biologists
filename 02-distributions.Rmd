@@ -1,6 +1,6 @@
 # Probability Distributions
 
-In the previous chapter we took a look at the data as well as their characteristics and summary statistics. While this approach is quite useful for initial exploration, we usually aim to create some inference based on our data. That is, we collect some sample data and then wish to make a statement about the population as a whole based on these data. This chapter provides an overview of the concept of _distributions_, which are the statistician's primary vehicle to accomplish this task. We discuss different classes of distributions and introduce the most important ones for biological -- and many other -- disciplines. All of this will be accompanied by examples to give you some feeling about how to think about your data in terms of distributions. We will also discuss the very important topic of _likelihood_, which tells us how well a distribution fits our data. The concepts in this chapter are paramount for your understanding of subsequent concepts.
+In the previous chapter we took a look at the data as well as their characteristics and summary statistics. While this approach is quite useful for initial exploration, we usually aim to create some inference based on our data. That is, we collect some sample data and then wish to make a statement about the population as a whole based on these data. This chapter provides an overview of the concept of _distributions_, which are the statistician's primary vehicle to accomplish this task. We discuss different classes of distributions and introduce the most important ones for biological -- and many other -- disciplines. All of this will be accompanied by examples to give you some feeling about how to think about your data in terms of distributions. We will also discuss the very important topic of _likelihood_, which tells us how well a distribution fits our data. The concepts in this chapter are paramount for your understanding of subsequent chapters.
 
 
 ## Why do we need probability distributions
@@ -20,14 +20,20 @@ Chances are hight that you, at some point in your career so far, encounted the _
 
 ## Distributions in R:
 
+In the following sections, we will not only learn different kinds of probability distributions from a theoretical point of view, but also how to leverage the power of R and implement distributions in our code in order to simulate data of a given distribution and 
+
+```{r, out.width='100%', fig.align='center', fig.cap='Implementation of distributions in R'}
+knitr::include_graphics('docs/Figures/rdistros.png')
+```
+
 <!--
 Explain the syntax of distros in R (e.g. dnorm, rnorm, pnorm, qnorm)
--->
+
 ```{r, out.width="120%"}
 knitr::include_app("https://alexanderkaier.shinyapps.io/Distributions/",
                    height = "400px")
 ```
-
+-->
 
 ## Discrete distributions
 Many things in this world can be counted. For example, the number of times some insects visit a flower, the number of plant species inhabiting an ecosystem, or how often the concentration of protein in a repeated experiment exceeds a pre-determined threshold. In order to describe so-called _countable_ events, discrete distributions entered the stage. 
@@ -45,9 +51,9 @@ The equation for the binomial distribution looks as follows:
   (\#eq:binom)
 \end{equation}
 
-We will use this formula not only to understand binomial distributions, but also to gain some know-how about mathematical notations when talking about probability and statistics. In order to understand the important terms and definitions I am going to tell you, we will start with the promised example. Imagine you are conducting an experiment, where you treat 10 mice with a drug and record how many show a reaction to the drug. Here, you just distinguish between "reaction" and "no reaction", so there are just two possible outcomes for each mouse in the experiment. Further, you observe that exactly 7 mice show a response to the drug, while 3 do not. This is exactly the kind of data that can be described using the binomial distribution. So let us get back to the formula to connect data and distribution (this is the exciting part!).
+We will use this formula not only to understand binomial distributions, but also to gain some know-how about mathematical notations when talking about probability and statistics. In order to understand the important terms and definitions I am going to tell you, we will start with the promised example. Imagine you are conducting an experiment, where you treat 10 mice with a drug and record how many show a reaction to the drug. Here, you just distinguish between "reaction" and "no reaction", so there are just two possible outcomes for each mouse in the experiment. Further, you observe that 7 mice show a response to the drug, while 3 do not. This is exactly the kind of data that can be described using the binomial distribution. So let us get back to the formula to connect data and distribution (this is the exciting part!).
 
-Let us start by looking at the left side, which is $P(X=k~|~n,~p)$. This notation is read as follows: _"the probability P that X attains the value k given n and p"_. $P$ simply denotes a function. This is nothing new, since you know already the notation $f(x)$. However, to distinguish probability functions from other functions, we use $P(X)$ instead of $f(x)$. Really nothing special about it. $X$ is what is called a _random variable (RV)_. We skip the strictly mathematical definition of an _RV_ and just remember it as follows: "A random variable is a variable whose values are outcomes of a random process". $k$ is what is called _a realization_ of $X$. The vertical bar "|" is pronounced as "given". Everything after that bar consists of specific model parameters with a fixed value. In this distribution, these parameters are $n$ and $p$. Now let us pull down this mathematical mumbo jumbo from the spheres of abstractness and make it applicable to our real world problem. In our case, $X$ is the number of responding mice and can attain any value between 0 and 10, while $k$ _is_ the specific realization e.g. 0, or 3, or, 7. $n$ is the number of repeated trials, in our case just the total number of mice if we assume that the reaction of each mouse is independent from each other (just like one coin toss does not depend on the preceding or subsequent toss) and that we did not favor Stuart over Jessica (obviously we gave every single mouse a name) in terms of treatment. $p$ is in our experiment the probability that any mouse shows a reaction to the drug. As a proxy, we can take the fraction of mice that showed a reaction within the whole sample, so 7 of 10, or 0.7, or 70%. To put it all together, our binomial distribution can be expressed as follows: _"What is the probability that k mice show a response to the drug, if we investigate 10 mice and each mouse has a probability of 0.7 to show a response"_. 
+Let us start by looking at the left side, which is $P(X=k~|~n,~p)$. This notation is read as follows: _"the probability P that X attains the value k given n and p"_. $P$ simply denotes a function. This is nothing new, since you know already the notation $f(x)$. However, to distinguish probability functions from other functions, we use $P(X)$ instead of $f(x)$. Really nothing special about it. $X$ is what is called a _random variable (RV)_. We skip the strictly mathematical definition of an _RV_ and just remember it as follows: "A random variable is a variable whose values are outcomes of a random process". $k$ is what is called _a realization_ of $X$. The vertical bar "|" is pronounced as "given". Everything after that bar consists of specific model parameters with a fixed value. In the binomial distribution, these parameters are $n$ and $p$. Now let us pull down this mathematical mumbo jumbo from the spheres of abstractness and make it applicable to our real world problem. In our case, $X$ is the number of responding mice and can attain any value between 0 and 10, while $k$ _is_ the specific realization e.g. 0, or 3, or, 7. $n$ is the number of repeated trials, in our case just the total number of mice if we assume that the reaction of each mouse is independent from each other (just like one coin toss does not depend on the preceding or subsequent toss) and that we did not favor Stuart over Jessica (obviously we gave every single mouse a name) in terms of treatment. $p$ is in our experiment the probability that any mouse shows a reaction to the drug. As a proxy, we can take the fraction of mice that showed a reaction within the whole sample, so 7 of 10, or 0.7, or 70%. To put it all together, our binomial distribution can be expressed as follows: _"What is the probability that k mice show a response to the drug, if we investigate 10 mice and each mouse has a probability of 0.7 to show a response"_. 
 
 After dissecting the left side of equation \@ref(eq:binom), we now turn towards the right side. This is actually the fun part where we can use reason to derive the function, because while the left side of the equation consists just of definitions and terminology, the right side captures the _logic_ of the function. For deriving the function, let us start with the part $p^k(1-p)^{n-k}$. In our experiment, the probability of any mouse to show a response to the drug is $p = 0.7$. Because there are only two outcomes of any particular observation (response or no response), the probability of showing a response ($p$) and the probability of not showing a response must add up to 1. After all, one of these two events _must_ happen. If we assign the variable $q$ to the probability of showing no response, it becomes clear that $p+q=1$, or $q=1-p$. So the $1-p$ within $p^k(1-p)^{n-k}$ is just the probability of any particular mouse to not respond to the drug, and $p$ is the probability is does. Now the exponents. We will use some exemplary numbers to make it tangible. Imagine of the 10 mice, exactly one shows a response, while the remaining 9 do not. Then $k=1$, $n=10$, and $n-k=9$. So we have $p^1(1-p)^9$. This makes totally sense, because we multiply probabilities of independent events to calculate the probability to observe a specific sequence of outcomes. What if 7 mice respond, but 3 do not? Then you see, that the probability to observe a response in the first 7 mice is $p*p*p*p*p*p*p=p^7$, while the probability of observing no response in the remaining 3 mice is just $(1-p)*(1-p)*(1-p)=(1-p)^3$. Et voilà, combined they give $p^7(1-p)^3$. But while, for example $p^1(1-p)^9$ is the probability that the first mouse is responsive to our drug and the remaining 9 are not, you might ask yourself the question _"But what if the first mouse does not show a response, but the second, and then the remaining 8 are non-responsive. Or what if only the 3rd mouse is responsive. Or..."_. Well, if you started asking yourself that than you are halfway on discovering the meaning of the remaining part of equation \@ref(eq:binom), namely the $\binom{n}{k}$. This beautiful expression is called _"binomial coefficient"_, and it simply spits out the number of combinations to draw $k$ successes out of $n$ outcomes. Please note that this has nothing to do with a fraction, as there is no division line between $n$ and $k$. In mathematics, whenever you talk about the binomial coefficient, you would say "$n$ choose $k$" or "$n$ over $k$". As an example, consider the case where only one mouse shows a response, but none of the others do. Some pondering might already reveal to you that the responsive mouse could be the first one, or the second one, or the third one, and so on, up to the chance that it could be the last one. So you say there are 10 different combinations of __any__ one mouse being responsive while the other 9 are not. And indeed $\binom{10}{1}=10$. And this, ladies and gentleman, is the derivation of the binomial distribution not by some fancy schmancy mathematical theorems, but by pure thinking about the question "If I throw a coin 10 times, what is the probability that I will see head any number of times between 0 and 10?", or in our example "If I treat 10 mice with a drug, what is the probability that I will see any number between 0 and 10 of responsive mice?".
 
@@ -65,6 +71,9 @@ axis(side = 1, at = seq(0,10), labels = seq(0,10))
 lines(xAxis, dbinom(xAxis, size=10, prob=0.7), lty=2, col="grey")
 ```
 
+Let us do another example, this time while using some R. A rare inheritable disease is _Myotoin dystrophy (MD) type I_. 
+
+### Poisson distribution
 
 
 ## Continuous probabality distributions
@@ -75,6 +84,21 @@ So far we have investigated a set of important discrete distributions that you a
 ### Uniform distribution
 
 ### Normal distribution
+
+## Exercises
+The following section 
+
+### Easy
+Imagine you perform an experiment where you record the impairment of growth that some plants show as response to heat stress. You define the response to be either "positive" or "negative". You estimate from previous experiments on a related plant species that the probability that any particular plant shows a response is 0.8 (the previous species was quite sensitive to heat stress). If you investigate 20 plants, which of the following equations correctly represents the probability that 16 out of the 20 plants show a reaction? Tip: Don't decide to quickly. Do the computation yourself using `dbinom` and the parameters `x`, `size`, and `prob` and check the numbers before deciding which answer is correct. Also, take a close look at each equation to be sure you understand which one is correct!
+
+  1. $P(X=16~|~n=20,~p=0.8) = \binom{20}{16}0.8^{16}(0.2)^{4} = 0.22$
+  
+  2. $P(X=16~|~n=20,~p=0.8) = \binom{20}{16}0.2^{16}(0.8)^{4} = 0.22$
+  
+  3. $P(X=16~|~n=20,~p=0.8) = \binom{20}{16}0.8^{16}(0.2)^{4} = 1.3\times10^{-8}$
+  
+  4. $P(X=16~|~n=20,~p=0.2) = \binom{20}{16}0.8^{16}(0.2)^{4} = 0.22$
+
 <!--
 Tell something about the central limit theorem and the extraordinary position of the normal distribution.
 -->
