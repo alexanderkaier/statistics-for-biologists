@@ -14,6 +14,9 @@ uniform-distribution
 normal-distribution
 exercises
 easy
+section
+medium
+section-1
 regression-and-glm
 correlation-and-covariance
 reject-or-not-to-reject

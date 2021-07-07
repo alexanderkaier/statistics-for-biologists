@@ -13,3 +13,4 @@ bookdown::gitbook:
       theme: white
       family: sans
       size: 3
+  citation_package: biblatex

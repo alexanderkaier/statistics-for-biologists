@@ -24,7 +24,7 @@
 <meta name="author" content="Alexander Kaier" />
 
 
-<meta name="date" content="2021-07-05" />
+<meta name="date" content="2021-07-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="an-ode-to-r.html"/>
 <link rel="next" href="descriptive-data-analysis.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.6" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>2.6</b> Exercises</a>
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="exercises.html"><a href="exercises.html#easy"><i class="fa fa-check"></i><b>2.6.1</b> Easy</a></li>
+<li class="chapter" data-level="2.6.2" data-path="exercises.html"><a href="exercises.html#medium"><i class="fa fa-check"></i><b>2.6.2</b> Medium</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="regression-and-glm.html"><a href="regression-and-glm.html"><i class="fa fa-check"></i><b>3</b> Regression and GLM</a></li>
@@ -204,7 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="roadmap" class="section level2 unnumbered">
 <h2>Roadmap</h2>
-<p><strong>Chapter 1</strong> will focus on <em>descriptive statistics</em>. Every experiment will at some point yield data that are to be analyzed <a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. As the name already gives away, descriptive statistics aims at summarizing your data and putting it into context, like the kind of distribution your data follows. This topic will be covered at the very beginning for two reasons. First, it does not demand a large amount of statistical knowledge and can be applied directly after obtaining the data at hand. Therefore, you can directly see the fruits of your work without having to meddle to strong with statistical concepts and assumptions. Second, it is an important first step in further analysis. Since we can usually only obtain a (small) sample size compared to a much larger population, the aim of the overall statistical analysis is to infer certain properties of the population based on the sample at hand. But in order to do so, we first have to <em>describe</em> how the sample data looks like and behaves. Hence, we begin with descriptive statistics.</p>
+<p><strong>Chapter 1</strong> will focus on <em>descriptive statistics</em>. Every experiment will at some point yield data that are to be analyzed.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> As the name already gives away, descriptive statistics aims at summarizing your data and putting it into context, like the kind of distribution your data follows. This topic will be covered at the very beginning for two reasons. First, it does not demand a large amount of statistical knowledge and can be applied directly after obtaining the data at hand. Therefore, you can directly see the fruits of your work without having to meddle to strong with statistical concepts and assumptions. Second, it is an important first step in further analysis. Since we can usually only obtain a (small) sample size compared to a much larger population, the aim of the overall statistical analysis is to infer certain properties of the population based on the sample at hand. But in order to do so, we first have to <em>describe</em> how the sample data looks like and behaves. Hence, we begin with descriptive statistics.</p>
 <p><strong>Chapter 2</strong> will lead us to the concept of distributions. Although the term “distribution” is used frequently in everyday life, its meaning in stats lingo is not so well-known. We will explore the differences between data distributions and theoretical distribution. Also, you will learn why and how to apply the important concepts of <em>distribution parameters</em> and <em>parameter estimation</em>. Some important types of distributions will be presented and their characteristics illuminated. Also, we will see how to fit a distribution to the data at hand. The concepts learned here will form the foundations for the subsequent chapters and will prove invaluable for your further understanding of statistics.</p>
 <p>In <strong>Chapter 3</strong>, we will dip our toes in the deep sea of regressions and explore the concept of <em>generalized linear models</em> (GLM). Don’t worry if this means nothing to you right now, it will all come at an appropriate time. This chapter is the logical consequence of the principles of distributions that we have learned before. The difference is that for GLM, the distribution parameter is no longer constant but depends on some variable within our data. In this way, we can explore the relations between two different data variables, the independent variable and the dependent variable. Although many people learning statistics do not connect these two concepts, this chapter paves the way for understanding statistical testing, as will be shown later.</p>
 <p><strong>Chapter 4</strong> will deal with the concepts of correlation and covariance. These topics are in some way the next step after linear regression, because for the analysis of correlation and covariance, you need to lose the constraint of one variable depending on another, as is the case for linear regression. In correlation analysis, no dependency is assumed, and therefore only the tendency of different data variables to vary together is analyzed.</p>
@@ -216,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="footnotes">
 <hr />
 <ol start="5">
-<li id="fn5"><p>Although maybe unintuitive at first sight, we will stick with the plural use of the word ‘data’. The reason is twofold. First, the word ‘data’ is already the plural form of the singular word ‘datum’. Second, an experiment usually yields more than a single data point (or datum)<a href="roadmap.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Although maybe unintuitive at first sight, we will stick with the plural use of the word ‘data.’ The reason is twofold. First, the word ‘data’ is already the plural form of the singular word ‘datum.’ Second, an experiment usually yields more than a single data point (or datum)<a href="roadmap.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

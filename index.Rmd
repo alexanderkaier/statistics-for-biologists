@@ -3,6 +3,7 @@ title: "Statistics for Biologists: An Introduction to the application, understan
 author: "Alexander Kaier"
 date: "`r Sys.Date()`"
 site: "bookdown::bookdown_site"
+bibliography: ["docs/bibliography/bibliography.bib"]
 ---
 
 # Preface {-}

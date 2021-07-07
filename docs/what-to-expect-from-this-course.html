@@ -24,7 +24,7 @@
 <meta name="author" content="Alexander Kaier" />
 
 
-<meta name="date" content="2021-07-05" />
+<meta name="date" content="2021-07-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="what-not-to-expect-from-this-course.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.6" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>2.6</b> Exercises</a>
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="exercises.html"><a href="exercises.html#easy"><i class="fa fa-check"></i><b>2.6.1</b> Easy</a></li>
+<li class="chapter" data-level="2.6.2" data-path="exercises.html"><a href="exercises.html#medium"><i class="fa fa-check"></i><b>2.6.2</b> Medium</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="regression-and-glm.html"><a href="regression-and-glm.html"><i class="fa fa-check"></i><b>3</b> Regression and GLM</a></li>
@@ -205,7 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="what-to-expect-from-this-course" class="section level2 unnumbered">
 <h2>What to expect from this course</h2>
 <p>This course will teach you the foundations of statistics in life science as comprehensible as possible. The material will neither lean towards the mathematical theory of statistics, nor will it be purely applied, since both of these topics are comprehensive enough to fill multiple volumes on their own. I rather chose to go the golden middle path. Here, three major methods will alternate in their utilization and depth. These are: mathematical concepts, programming, and (most importantly) textual explanations of everything of importance for the concept or problem at hand to be understood thoroughly.</p>
-<p>The mathematics will be used according to the rule “as much as necessary, as little as possible”. This is NOT a course about mathematical statistics, so don’t be afraid about to much maths. Nevertheless, statistics is a subdiscipline of mathematics after all, and therefore, there is no way to avoid mathematics altogether. But there is no reason to be discouraged, because all equations and where necessary the derivations thereof will be explained in great detail. After this course, you will be able to read and navigate through the basic mathematics of statistics like an experienced sailor can read the waves and stars to find their<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> way home.</p>
+<p>The mathematics will be used according to the rule “as much as necessary, as little as possible.” This is NOT a course about mathematical statistics, so don’t be afraid about to much maths. Nevertheless, statistics is a subdiscipline of mathematics after all, and therefore, there is no way to avoid mathematics altogether. But there is no reason to be discouraged, because all equations and where necessary the derivations thereof will be explained in great detail. After this course, you will be able to read and navigate through the basic mathematics of statistics like an experienced sailor can read the waves and stars to find their<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> way home.</p>
 <p>The second method of teaching used in this course, the programming, is as essential as the mathematics. Although it is called programming, we will mainly focus on the analysis of data by means of the programming language R (depending on your career, programming usually encompasses much more than plain data analysis). It might take some time until you get used to using R for data analysis, because I expect most readers to come from a background where data analysis was performed in one of the many available spreadsheet programs (e.g. Excel). Such kind of software is also called WYSIWYG (what you see is what you get) because it works with buttons and widgets to click on and drag around. Although visually appealing, using a graphical user interface (GUI) for data analysis is actually debilitating compared to code based software like R. I too came from this background and had to get used to this kind of analysis software. At this point I can give you the spoiler that all efforts learning code based data analysis are more than repaid once you get stuck with your graphical analysis software. For a more elaborate pleading in favor of R see <a href="an-ode-to-r.html#an-ode-to-r">this section about the perks of R in data analysis</a>. In order to follow through the course you will have to have R installed on your machine (it works on all prevalent OS). Also, you will need some additional packages throughout the course. R packages are like libraries of code (and are in fact often called as such) because they contain code written by other people in order to facilitate our analysis pipeline and focus on the fun part without having to meddle too much with the programming part itself. The code I use in this course will be embedded in blocks. Most of the time, such a block is subsided by its output, like in the following example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="what-to-expect-from-this-course.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting a random seed reproducible simulation</span></span>
 <span id="cb1-2"><a href="what-to-expect-from-this-course.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
