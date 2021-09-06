@@ -24,7 +24,7 @@
 <meta name="author" content="Alexander Kaier" />
 
 
-<meta name="date" content="2021-07-06" />
+<meta name="date" content="2021-09-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -205,7 +227,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="an-ode-to-r" class="section level2 unnumbered">
 <h2>An ode to R</h2>
-<p>I first encountered the statistical programming language R when I had to accomplish the data analysis for the data I collected for my Bachelor thesis. Back then I had no idea about programming, R, or applied statistics (besides maybe the t-test, and among us, how much of your undergraduate statistics course do you remember and apply in your daily work?). Back then my supervisor forced me to do the data analysis using R and RStudio<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Although a medical biologist by training, he loved programming, statistics and data analysis. I shall thank him forever for opening that door for me (he actually rather pushed me through it for my own good). As soon as I started doing my data analysis using R and RStudio, I realized what treasure I had discovered. During the remainder of this section, I will share with you the perks of R and RStudio that I learned appreciating over time.</p>
+<p>I first encountered the statistical programming language R when I had to accomplish the data analysis for the data I collected for my Bachelor thesis. Back then I had no idea about programming, the R language, or applied statistics (besides maybe the t-test, and among us, how much of your undergraduate statistics course do you remember and apply in your daily work?). Back then my supervisor forced me to do the data analysis using R and RStudio<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Although a medical biologist by training, he loved programming, statistics and data analysis. I shall thank him forever for opening that door for me (he actually rather pushed me through it for my own good). As soon as I started doing my data analysis using R and RStudio, I realized what treasure I had discovered. During the remainder of this section, I will share with you the perks of R and RStudio that I learned appreciating over time.</p>
 <p>The first and probably biggest advantage of R or any other programming language over spreadsheet software like Excel is that the analysis done with R is self-documenting. What I mean by that is when you perform your data analysis in R, you usually create an empty script first, which you then fill with the code that you need to load your data, analyze it at will and create and save output statistics and graphs. This fundamentally different approach compared to spreadsheet software allows you to come back to your analysis at any time and break it down bit-by-bit. Imagine you get some experimental data and need to extract some summary statistics from them. After some time, you realize you made a mistake and have to redo the analysis. If you did it using some spreadsheet software, then good luck redoing all the clicks and drags and whatever steps you did in a reproducible way. If you used R instead, you just open the script you wrote for the analysis in RStudio, go through it line by line, change the erroneous part, and rerun the whole script. You virtually eliminate the potential for human errors, when doing the same thing twice. This also saves a huge amount of time, depending on the complexity of the analysis and the amount of data. If then anybody asks you what you precisely did, you can just hand them over the script or explain it to them like you would read a book. If you used some spreadsheet software instead, chances are high you wrote every single step down in your manual lab-book. If you are sufficiently meticulous in your documentation to have written it down so that you can actually redo a complex analysis, I bet writing down the whole analysis took you more time than you’d like to admit. This doubling of work almost never happens when using R. Also you are less prone to work with the raw data when using R. I have seen on multiple occacions now that some scientist hands me over a spreadsheet, where not only the raw data was included, but they also created already summary statistics and plots and whatever in the same spreadsheet. <strong>Never do that</strong>. Although I think of it as self-evident, I have seen this habit too often to not emphasize it here. When doing your data analysis, you load your data into R and then manipulate the version of the data in your running session<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. Once you are done with the analysis, you save <em>a new document</em> with whatever insight you gained from your data. Never manipulate your raw data. This is only one of the many good habits you’ll take to you heart once you start working with data more professional and with R.</p>
 <p>Second, some analyses can be <em>really</em> specific to the problem at hand. Chances are you search the internet for days in order to solve a specific problem or implement the solution as desired using some spreadsheet software. As the term <em>programming language</em> implies, R can be programmed, meaning that quite often it proves to be handy if you can create the desired solutions using a few lines of code which you then implement in your analysis. Many times when you want to use a specific program to analyze your data, this program expects a very specific way of organization within you dataset. If you can’t find someone who did the exact same data transformation before and published a program that you can use you might run into trouble. If you are able to transform your data yourself using some basic programming, there are no strings attached to you<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. However, this is no book about programming, and therefore we will not dive deep into the core concepts of programming languages, but focus on the code that is necessary to conduct sound data analysis and statistics. But keep in mind the power you gain if you can solve a huge amount of problems that would otherwise prevent you from doing what you want to do using only a few lines of code.</p>
 <p>Third, and related to the first point, sometimes you want to test different models and compare their fit to your data or create different summary statistics, based on the question to be answered. Using spreadsheet software (by now you probably guessed it already) it can take a lot of time to copy data, transform it, handle missing data appropriately and so on. Using R, these kind of tasks are usually accomplished by changing a few lines of code slightly, maybe by tweaking some function parameters or looping over different models to compare them. And again, the single steps are much more tractable if you do this using a programming based approach compared to spreadsheet software.</p>
@@ -221,7 +243,7 @@ R has three great advantages over Excel and likewise:
 <div class="footnotes">
 <hr />
 <ol start="2">
-<li id="fn2"><p>RStudio is what is called an <em>Integrated Development Environment</em>(IDE). This kind of software is there for helping you writing, testing, and managing code, and since R is a statistical programming language, R-Studio is particularly designed for data analysis tasks. If you don’t have it already, I strongly recommend downloading the version suitable for your OS under the <a href="https://www.rstudio.com/products/rstudio/download/">RStudio download page</a><a href="an-ode-to-r.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>RStudio is what is called an <em>Integrated Development Environment</em>(IDE). This kind of software is there for helping you writing, testing, and managing code, and since R is a statistical programming language, RStudio is particularly designed for data analysis tasks. If you don’t have it already, I strongly recommend downloading the version suitable for your OS under the <a href="https://www.rstudio.com/products/rstudio/download/">RStudio download page</a><a href="an-ode-to-r.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>or if you work with spreadsheet software, create a copy and do the analysis using this copy<a href="an-ode-to-r.html#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>Because of this precise feature of being programmable, in recent years hundreds of R packages were written specifically with the aim of doing biological data analysis. Most of these packages are collected and distributed using the package manager <a href="https://www.bioconductor.org/">Bioconductor</a>. Although you probably won’t need or use most of the packages provided there it can give you quite a nice impression of how versatile and powerful the programming paradigm is compared to other approaches for data analysis<a href="an-ode-to-r.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>

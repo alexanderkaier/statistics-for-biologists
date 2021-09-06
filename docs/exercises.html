@@ -24,7 +24,7 @@
 <meta name="author" content="Alexander Kaier" />
 
 
-<meta name="date" content="2021-07-06" />
+<meta name="date" content="2021-09-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -226,7 +248,7 @@ Tip: Don’t decide to quickly. Do the computation yourself using <code>dbinom</
 <p>A rare inheritable disease is <em>Marfan Syndrome</em>, or MFS. This disease is a genetic disorder that affects the connective tissue. Symptomatic severity varies from few or no signs at all to serious or even life-threatening complications. The disease is caused by a mutation in the <em>fibrillin-1</em> (FBN1) gene. The <em>FBN1</em> gene is responsible for the production of fibrillin-1, a protein that can form elastic fibers within the connective tissue. Because a mutation in one of the two alleles for that gene (one from the mother and one from the father) is sufficient for the disease to be present, it is called <em>autosomal dominant</em>. Autosomal, because the protein’s gene lies on chromosome 15 (genes lying on chromosomes X and Y are called <em>gonosomal</em>), and dominant because a mal-functional allele can not be compensated by a funtional one.</p>
 <p>About 75% of the times this disease is observed, it was inherited by one or both of the parents while about 25% of the cases are caused by spontaneous mutations within the unborn baby while in womb. For simplicity, we assume that MFS is caused exclusively be inheritance.</p>
 <p>Now imagine the following scenario. You work as patient consultant for a laboratory for molecular diagnostics. One day, a couple comes to you which is seeking information. The husband has MFS and has been tested to be heterozygous for the <em>FBN1</em> gene. The wife is homozygous healthy for that gene. If we denote the healty allele by <em>A</em> and the disease-causing allele by <em>a</em>, then we can identify the husband’s <em>genotype</em> at that position as <em>Aa</em>, while his wife has the genotype <em>AA</em>. The couple now tells you that they plan to have 4 children. They ask you what the probabilities are that any number of their future children might inherit the disease from the husband. What do you tell them? </br>
-Tip: Create a so-called Punnett square to check all possible combinations of the husband’s and the wife’s alleles. How many of them have the disease-causing allele? What does that tell you about the probability for <em>any</em> child to carry the disease-causing allele?</p>
+Tip: Create a Punnett square to check all possible combinations of the husband’s and the wife’s alleles. How many of these combinations have the disease-causing allele? What does that tell you about the probability for <em>any</em> child to carry the disease-causing allele?</p>
 <!--
 Tell something about the central limit theorem and the extraordinary position of the normal distribution.
 -->
